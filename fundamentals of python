@@ -1,0 +1,81 @@
+C:\Users\manas>python
+Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+- arithmetic operations
+>>> 2+3
+5
+>>> 9-8
+1
+>>> 4*6
+24
+- floating point representation
+>>> 8/4
+2.0
+>>> 5/2
+2.5
+- integer division
+>>> 5//2
+2
+>>> 8+9-10
+7
+>>> 8+9-
+  File "<python-input-7>", line 1
+    8+9-
+        ^
+SyntaxError: invalid syntax
+>>> 8+2*3
+14
+>>> (8+2)*3
+30
+>>> 2*2*2
+8
+- to the power
+>>> 2**3
+8
+>>> 2**10
+1024
+>>> 10//3
+3
+- remainder (use modulus)
+>>> 10%3
+1
+- string
+>>> 'manas'
+'manas'
+>>> print('manas')
+manas
+- you can't use multiple singlr quot
+>>> print ('manas's laptop')
+  File "<python-input-17>", line 1
+    print ('manas's laptop')
+                          ^
+SyntaxError: unterminated string literal (detected at line 1)
+- use double quot and in a sentense use single quot
+>>> print ("manas's laptop")
+manas's laptop
+>>> print ('manas "laptop"')
+manas "laptop"
+>>> print ('manas's "laptop"')
+  File "<python-input-23>", line 1
+    print ('manas's "laptop"')
+                            ^
+SyntaxError: unterminated string literal (detected at line 1)
+- skip the special meaning of that single quot by using '\'
+>>> print ('manas\'s "laptop"')
+manas's "laptop"
+>>> 'manas'+'manas'
+'manasmanas'
+-print 10 times
+>>> 10*'manas'
+'manasmanasmanasmanasmanasmanasmanasmanasmanasmanas'
+>>> print('c:\docs\manas')
+<python-input-28>:1: SyntaxWarning: invalid escape sequence '\d'
+c:\docs\manas
+- \n in pyhon means 'new line'
+>>> print('c: \docs \naman')
+<python-input-30>:1: SyntaxWarning: invalid escape sequence '\d'
+c: \docs
+aman
+- raw string (print the line as it is)
+>>> print(r'c: \docs \naman')
+c: \docs \naman
