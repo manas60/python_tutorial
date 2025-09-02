@@ -1,0 +1,77 @@
+- variable is a container that store the value
+>>> x=2 (value =2 and variable name = x)
+>>> x+3
+5
+>>> y=3
+>>> x+y
+5
+>>> x=9 (change the value of variable x)
+>>> x+y
+12
+>>> x
+9
+>>> abc (here we didn't define abc but try to print it so we got an error)
+Traceback (most recent call last):
+  File "<python-input-40>", line 1, in <module>
+    abc
+NameError: name 'abc' is not defined. Did you mean: 'abs'? Or did you forget to import 'abc'?
+>>> x+10
+19
+>>> 19+y
+22
+>>> _+y ( '_' reprent the previous output value which is 22 here)
+25
+>>> name = 'sevya'
+>>> name
+'sevya'
+>>> name + 'rocks'
+'sevyarocks'
+>>> name + ' rocks'
+'sevya rocks'
+>>> name  ' rocks'
+  File "<python-input-48>", line 1
+    name  ' rocks'
+          ^^^^^^^^
+SyntaxError: invalid syntax
+- value of the string store as [0,1,2,3,4,....]
+>>> name [0]
+'s'
+>>> name [4]
+'a'
+- in 6th position of the string we don't have any value so we got error
+>>> name [6]
+Traceback (most recent call last):
+  File "<python-input-51>", line 1, in <module>
+    name [6]
+    ~~~~~^^^
+IndexError: string index out of range
+- value of the string also store as[....,-4,-3,-2,-1]
+>>> name [-1]
+'a'
+>>> name [-5]
+'s'
+-[starting point : ending point] (ending point is excluded)
+>>> name[0:2]
+'se'
+>>> name[1:4]
+'evy'
+>>> name[1:]
+'evya'
+>>> name[:5]
+'sevya'
+>>> name[:4]
+'sevy'
+>>> name[3:10]
+'ya'
+- strings in python are immutable we can't change the value
+>>> name[0]='m'
+Traceback (most recent call last):
+  File "<python-input-60>", line 1, in <module>
+    name[0]='m'
+    ~~~~^^^
+TypeError: 'str' object does not support item assignment
+>>> 'my' + name
+'mysevya'
+>>> myname='manas kumar sahoo'
+>>> len(myname) {check the length of the string using 'len' function}
+17
