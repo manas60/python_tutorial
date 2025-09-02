@@ -1,0 +1,105 @@
+- A set in Python is an unordered collection of unique elements, meaning it does not allow duplicate values and does not maintain a specific order for its items.
+- Sets are mutable, allowing elements to be added or removed after creation, but the individual elements themselves must be immutable (hashable) types such as numbers, strings, or tuples.
+- This immutability requirement prevents the inclusion of mutable types like lists or dictionaries within a set.
+Key Characteristics of Sets:-
+- Unordered – No index or position for elements.
+- Unique elements – No duplicates allowed.
+- Mutable – You can add or remove elements.
+- Heterogeneous – Can contain different data types.
+- Creating a Set
+>>> fruits = {"apple", "banana", "mango"}
+>>> fruits
+{'mango', 'banana', 'apple'}
+>>> numbers = set([1, 2, 3, 4])
+>>> numbers
+{1, 2, 3, 4}
+>>> empty_set = set()
+>>> empty_set
+set()
+Basic Operations on Sets
+1. Adding Elements
+>>> fruits = {"apple", "banana", "mango"}
+>>> fruits.add("guava")
+>>> fruits
+{'guava', 'mango', 'banana', 'apple'}
+>>> fruits.update(["grape", "orange"])
+>>> fruits
+{'mango', 'grape', 'orange', 'banana', 'apple', 'guava'}
+2. Removing Elements
+| Method          | Behavior                                           |
+| --------------- | -------------------------------------------------- |
+| `remove(item)`  | Removes the element; **raises error** if not found |
+| `discard(item)` | Removes the element; **no error** if not found     |
+| `pop()`         | Removes and returns a random element               |
+
+>>> fruits.remove("apple")
+>>> fruits
+{'mango', 'grape', 'orange', 'banana', 'guava'}
+>>> fruits.remove("kaju")
+Traceback (most recent call last):
+  File "<python-input-52>", line 1, in <module>
+    fruits.remove("kaju")
+    ~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'kaju'
+>>> fruits.discard("banana")
+>>> fruits
+{'mango', 'grape', 'orange', 'guava'}
+>>> fruits.discard("kaju")
+>>> fruits
+{'mango', 'grape', 'orange', 'guava'}
+>>> removed = fruits.pop()
+>>> removed
+'mango'
+>>> fruits
+{'grape', 'orange', 'guava'}
+>>> fruits , removed
+({'grape', 'orange', 'guava'}, 'mango')
+3. Set Operations
+Union (| or union())
+Combines elements from both sets (no duplicates):
+>>> a = {1, 2, 3}
+>>> b = {3, 4, 5}
+>>> a|b
+{1, 2, 3, 4, 5}
+>>> a.union(b)
+{1, 2, 3, 4, 5}
+Intersection (& or intersection())
+Elements common to both sets:
+>>> a&b
+{3}
+>>> a.intersection(b)
+{3}
+Difference (- or difference())
+Elements in one set but not the other:
+>>> a-b
+{1, 2}
+>>> b-a
+{4, 5}
+Symmetric Difference (^ or symmetric_difference())
+Elements in either set but not in both:
+>>> a^b
+{1, 2, 4, 5}
+>>> a.symmetric_difference(b)
+{1, 2, 4, 5}
+4. Subset, Superset, and Disjoint
+>>> x.issubset(y)
+True
+>>> y.issubset(x)
+False
+>>> y.issuperset(x)
+True
+>>> x.isdisjoint({5,6})
+True
+5. Built-in Functions
+| Function   | Description        | Example                |
+| ---------- | ------------------ | ---------------------- |
+| `len(set)` | Number of elements | `len({1,2,3})` → `3`   |
+| `max(set)` | Maximum value      | `max({5,10,3})` → `10` |
+| `min(set)` | Minimum value      | `min({5,10,3})` → `3`  |
+| `sum(set)` | Sum of elements    | `sum({5,10,3})` → `18` |
+
+6.Remove duplicates from a list
+>>> data = [1, 2, 2, 3, 4, 4, 5]
+>>> unique_data = set(data)
+>>> unique_data
+{1, 2, 3, 4, 5}
