@@ -1,0 +1,82 @@
+- Tuples are used to store multiple items in a single variable.
+- A tuple is a collection which is ordered and unchangeable.
+- Tuple items are ordered, unchangeable, and allow duplicate values.
+- Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+- Creating a Tuple
+>>> single = (10,)
+>>> single
+(10,)
+>>> single = (10)
+>>> single
+10
+- Tuple Operations
+1.indexing
+>>> fruits = ("apple", "banana", "mango")
+>>> fruits[0]
+'apple'
+>>> fruits[-1]
+'mango'
+2.Slicing
+>>> numbers = (10, 20, 30, 40, 50)
+>>> numbers[1:4]
+(20, 30, 40)
+>>> numbers[:3]
+(10, 20, 30)
+>>> numbers[::-1]
+(50, 40, 30, 20, 10)
+3. Concatenation
+>>> a=(1,2,3)
+>>> b=(5,6)
+>>> c=a+b
+>>> c
+(1, 2, 3, 5, 6)
+4. Repetition
+>>> t=("hi",)*3
+>>> t
+('hi', 'hi', 'hi')
+5. Membership
+>>> fruits = ("apple", "banana", "mango")
+>>> "apple" in fruits
+True
+>>> "grape" not in fruits
+True
+6. Iteration
+>>> for fruit in fruits:
+...     fruit
+...     print(fruit)
+...
+'apple'
+apple
+'banana'
+banana
+'mango'
+mango
+>>> for fruit in fruits:
+...     print(fruit)
+...
+apple
+banana
+mango
+7. Built-in Functions
+| Function  | Description                        | Example                      |
+| --------- | ---------------------------------- | ---------------------------- |
+| `len()`   | Length of tuple                    | `len(fruits)` → `3`          |
+| `max()`   | Largest value (numbers or strings) | `max((1, 5, 3))` → `5`       |
+| `min()`   | Smallest value                     | `min((1, 5, 3))` → `1`       |
+| `sum()`   | Sum of numeric values              | `sum((1, 2, 3))` → `6`       |
+| `tuple()` | Convert iterable to tuple          | `tuple([1,2,3])` → `(1,2,3)` |
+8. Count and Index Methods
+>>> numbers = (1, 2, 3, 2, 4, 2)
+>>> numbers.count(2)
+3
+>>> numbers.count(3)
+1
+>>> numbers.index(3)
+2
+9. Tuple Packing and Unpacking
+>>> person = ("manas",21,"don")
+>>> name,age,profession = person
+>>> name
+'manas'
+>>> age
+21
