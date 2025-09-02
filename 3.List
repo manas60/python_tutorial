@@ -3,6 +3,14 @@
 - They are mutable, meaning their contents can be changed after creation, allowing for the addition, removal, or modification of items.
 - Lists can contain elements of different data types, including integers, strings, booleans, dictionaries, or even other lists, making them heterogeneous.
 - This flexibility is a key difference from arrays in languages like C or Java, where elements must be of the same type.
+- append(x) -----> Adds element at the end
+- insert(i, x) -----> Adds element at index i
+- remove(x) -----> Removes first occurrence of element
+- pop(i) -----> Removes element by index (default last
+- sort() -----> Sorts list (ascending)
+- reverse() -----> Reverses list
+- count(x) -----> Counts occurrences of an element
+- index(x) -----> Finds index of first occurrence
 >>> nums=[25,98,76,15]
 >>> nums
 [25, 98, 76, 15]
