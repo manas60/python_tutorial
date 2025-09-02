@@ -1,0 +1,63 @@
+- In Python, a list is a built-in data type used to store an ordered collection of items.
+- Lists are defined using square brackets [], with elements separated by commas.
+- They are mutable, meaning their contents can be changed after creation, allowing for the addition, removal, or modification of items.
+- Lists can contain elements of different data types, including integers, strings, booleans, dictionaries, or even other lists, making them heterogeneous.
+- This flexibility is a key difference from arrays in languages like C or Java, where elements must be of the same type.
+>>> nums=[25,98,76,15]
+>>> nums
+[25, 98, 76, 15]
+>>> nums[0]
+25
+>>> nums[3]
+15
+>>> nums[1:3]
+[98, 76]
+>>> nums[-1]
+15
+>>> nums[-4]
+25
+>>> names=['manas','nanda','ratha','dada','saroj']
+>>> names
+['manas', 'nanda', 'ratha', 'dada', 'saroj']
+>>> value=['nanda', 69 , 'dada']
+>>> mil=[nums , names]
+>>> mil
+[[25, 98, 76, 15], ['manas', 'nanda', 'ratha', 'dada', 'saroj']]
+>>> nums.append(14)
+>>> nums
+[25, 98, 76, 15, 14]
+>>> nums.insert(2,9)
+>>> nums
+[25, 98, 9, 76, 15, 14]
+>>> nums.remove(15)
+>>> nums
+[25, 98, 9, 76, 14]
+>>> nums.pop(1)
+98
+>>> nums
+[25, 9, 76, 14]
+>>> nums.pop()
+14
+>>> nums
+[25, 9, 76]
+>>> del nums[2:]
+>>> nums
+[25, 9]
+>>> nums.extend[28,76,90,34,5]
+Traceback (most recent call last):
+  File "<python-input-88>", line 1, in <module>
+    nums.extend[28,76,90,34,5]
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: 'builtin_function_or_method' object is not subscriptable
+>>> nums.extend([28,76,90,34,5])
+>>> nums
+[25, 9, 28, 76, 90, 34, 5]
+>>> min(nums)
+5
+>>> max(nums)
+90
+>>> sum(nums)
+267
+>>> nums.sort()
+>>> nums
+[5, 9, 25, 28, 34, 76, 90]
