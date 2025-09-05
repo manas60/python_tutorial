@@ -1,0 +1,63 @@
+-A dictionary in Python is a built-in data type that stores data in the form of key–value pairs.
+- student.keys()     # Returns all keys
+- student.values()   # Returns all values
+- student.items()    # Returns key-value pairs as tuples
+- Keys must be unique and immutable (like strings, numbers, tuples).
+- Values can be any type (list, dict, string, etc.).
+- Very useful for fast lookups and storing structured data.
+
+>>> data = {1:'manas',2:'nanda',4:'saroj',5:'ratha',7:'dada'}
+>>> data
+{1: 'manas', 2: 'nanda', 4: 'saroj', 5: 'ratha', 7: 'dada'}
+>>> data[4]
+'saroj'
+>>> data[1]
+'manas'
+>>> data[3]
+Traceback (most recent call last):
+  File "<python-input-89>", line 1, in <module>
+    data[3]
+    ~~~~^^^
+KeyError: 3
+>>> data.get(6)
+>>> data.get(5)
+'ratha'
+>>> print (data.get(3))
+None
+>>> data.get(5,'not found')
+'ratha'
+>>> data.get(3,'not found')
+'not found'
+>>> keys = ['manas ','nanda','saroj']
+>>> values = ['python','java','js']
+>>> data = dict(zip(keys,values))
+>>> data
+{'manas ': 'python', 'nanda': 'java', 'saroj': 'js'}
+>>> data['manas']
+Traceback (most recent call last):
+  File "<python-input-99>", line 1, in <module>
+    data['manas']
+    ~~~~^^^^^^^^^
+KeyError: 'manas'
+>>> data['manas ']
+'python'
+>>> data ['monika']= 'cs'
+>>> data
+{'manas ': 'python', 'nanda': 'java', 'saroj': 'js', 'monika': 'cs'}
+>>> del data['saroj']
+>>> data
+{'manas ': 'python', 'nanda': 'java', 'monika': 'cs'}
+- list inside a dictionary
+>>> prog ={'js':'atom','cs':'vs','python':['pycharm','sublim'],'java':{'JSE':'netbeans','JEE':'eclips'}}
+>>> prog
+{'js': 'atom', 'cs': 'vs', 'python': ['pycharm', 'sublim'], 'java': {'JSE': 'netbeans', 'JEE': 'eclips'}}
+>>> prog['js']
+'atom'
+>>> prog['python']
+['pycharm', 'sublim']
+>>> prog['python'][1]
+'sublim'
+>>> prog['java']
+{'JSE': 'netbeans', 'JEE': 'eclips'}
+>>> prog['java']['JEE']
+'eclips'
